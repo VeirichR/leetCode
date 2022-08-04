@@ -14,3 +14,21 @@ Example 2:
 Input: n = 5
 Output: ["1","2","Fizz","4","Buzz"]
  */
+var fizzBuzz = function(n) {
+    var stringArray = {'resp': []}
+    let resp = []
+    for(let i = 0; i <= n; i++){
+        if(i % 3 == 0 & i % 5 == 0){
+            stringArray.resp.push('FizzBuzz')
+        }else if(i % 3 == 0){
+            stringArray.resp.push('fizz')
+        }else if(i % 5 == 0){
+            stringArray.resp.push('Buzz')
+        }else{
+            stringArray.resp.push(`${i}`)
+        }
+    }
+    return stringArray.resp
+};
+
+console.log(fizzBuzz(3))
